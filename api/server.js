@@ -1,6 +1,10 @@
 const express = require('express');
+const {logger, validateUserId, validatePost, validateUser} = require('./middleware/middleware')
 
 const server = express();
+
+const Users = require(`./users/users-model`)
+const Posts = require(`./posts/posts-model`)
 
 // remember express by default cannot parse JSON in request bodies
 
