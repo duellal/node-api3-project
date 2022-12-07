@@ -3,7 +3,7 @@ const Posts = require(`../posts/posts-model`)
 
 
 function logger(req, res, next) {
-  console.log(`The request method is ${req.method}, the request url is ${req.baseUrl}, and the time is ${req.time}`)
+  console.log(`The request method is ${req.method}, the request url is ${req.url}, and the time is ${Date.now()}`)
   next()
 }
 
@@ -25,11 +25,10 @@ async function validateUserId(req, res, next) {
   }}
 
 function validateUser(req, res, next) {
-  // DO YOUR MAGIC
 }
 
 function validatePost(req, res, next) {
-  // DO YOUR MAGIC
+  
 }
 
 // do not forget to expose these functions to other modules
